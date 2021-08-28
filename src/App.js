@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import { Carito } from "./components/compras/Carito";
+import { Listado } from "./components/compras/Listado";
+//import { BotonCambiarData } from "./components/BotonCambiarData";
+import { Contador } from "./components/Contador";
+import { Pagina1 } from "./components/Pagina1";
+import { Pagina2 } from "./components/Pagina2";
+import { DataProvider } from "./context/DataContext";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DataProvider>
+        <Container>
+          <Pagina1 />
+          <Pagina2 />
+         {/*  <BotonCambiarData /> */}
+         <Contador />
+         <Carito />
+         <Listado />
+        </Container>
+    </DataProvider>
   );
 }
+
+const Container = styled.div`
+  padding: 10px;
+`;
 
 export default App;
