@@ -4,6 +4,7 @@ import { Listado } from "./components/compras/Listado";
 //import { BotonCambiarData } from "./components/BotonCambiarData";
 import { Contador } from "./components/Contador";
 import { ContadorRedux } from "./components/contador/ContadorRedux";
+import { Formulario } from "./components/formulario/Formulario";
 import { Pagina1 } from "./components/Pagina1";
 import { Pagina2 } from "./components/Pagina2";
 import { DataProvider } from "./context/DataContext";
@@ -22,6 +23,7 @@ function App() {
          <Listado />
          <ContadorReducer />
          {/* <ContadorRedux /> */}
+         <Formulario />
         </Container>
     </DataProvider>
   );
